@@ -24,14 +24,14 @@ public class CpuDAOImpl extends HibernateDaoSupport implements CpuDAO {
 
 
     public void updateCpu(final int id, final Map<String, Object> params) {
-        CpuPO cpu = new CpuPO();
-        cpu.setId(id);
-        cpu.setL1Cache("4*32 bytes");
-        cpu.setL2Cache("4*32 bytes");
-        Session session = this.getSessionFactory().openSession();
-        session.update(cpu);
-        session.flush();
-        session.close();
+//        CpuPO cpu = new CpuPO();
+//        cpu.setId(id);
+//        cpu.setL1Cache("4*32 bytes");
+//        cpu.setL2Cache("4*32 bytes");
+//        Session session = this.getSessionFactory().openSession();
+//        session.update(cpu);
+//        session.flush();
+//        session.close();
     }
 
 

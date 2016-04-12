@@ -2,6 +2,7 @@ package com.kd.test.app.function.service.impl;
 
 import com.kd.test.app.function.dao.CpuDAO;
 import com.kd.test.app.function.service.CpuService;
+import com.kd.test.app.model.CompanyPO;
 import com.kd.test.app.model.CpuPO;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -37,4 +38,12 @@ public class CpuServiceImpl implements CpuService {
     public void setCpuDAO(CpuDAO cpuDAO) {
         this.cpuDAO = cpuDAO;
     }
+
+
+    public void deleteCpuByHQL() {
+        cpuDAO.deleteCpuByHQL();
+    }
+
+
+
 }

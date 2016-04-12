@@ -14,4 +14,6 @@ public interface CpuService {
     public void insertService(final CpuPO cpu);
 
     public void deleteService(final CpuPO cpu);
+
+    public void deleteCpuByHQL();
 }

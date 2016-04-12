@@ -16,4 +16,6 @@ public interface CpuDAO {
     public void insertSingleCpuObj(final CpuPO cpu);
 
     public void deleteSingleCpuObj(final CpuPO cpu);
+
+    public void deleteCpuByHQL();
 }

@@ -23,19 +23,21 @@ public class MainEntry {
 //        CpuDAO dao =(CpuDAO) appCtx.getBean("cpuDAO");
 //        dao.updateCpu(2);
 
-            CpuService service = (CpuService)appCtx.getBean("cpuService");
+        CpuService service = (CpuService)appCtx.getBean("cpuService");
 
 //            CpuDAO dao = (CpuDAO)appCtx.getBean("cpuDAO");
 //            dao.updateCpuByHQL();
-            CpuPO cpu = new CpuPO();
-            cpu.setCpuName("Intel Core i7 4970k");
-            cpu.setBusSpeed("100MHz");
-            cpu.setMultiplier("15-40");
-            cpu.setL1Cache("4*64 KBytes");
-            cpu.setL2Cache("4*64 KBytes");
+//            CpuPO cpu = new CpuPO();
+//            cpu.setCpuName("Intel Core i7 4970k");
+//            cpu.setBusSpeed("100MHz");
+//            cpu.setMultiplier("15-40");
+//            cpu.setL1Cache("4*64 KBytes");
+//            cpu.setL2Cache("4*64 KBytes");
 //            dao.insertSingleCpuObj(cpu);
 
-            service.insertService(cpu);
+//            service.insertService(cpu);
+        service.deleteCpuByHQL();
+
 //        SessionFactory sessionFactory = (SessionFactory) appCtx.getBean("sessionFactory");
 //        HibernateTransactionManager txManager = new HibernateTransactionManager();
 //        txManager.setSessionFactory(sessionFactory);

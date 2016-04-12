@@ -101,7 +101,16 @@
         <property name="cpuDAO" ref="cpuDAO" />
     </bean>
 
+    <bean class="com.kd.test.app.function.service.impl.CompanyServiceImpl" id="companyService">
+        <property name="companyDAO" ref="companyDAO" />
+    </bean>
+
+
     <bean class="com.kd.test.app.function.dao.impl.CpuDAOImpl" id="cpuDAO">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <bean class="com.kd.test.app.function.dao.impl.CompanyDAOImpl" id="companyDAO">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 

@@ -18,6 +18,7 @@ public class CpuPO {
     private String l2Cache;
     private String l3Cache;
     private String instruction;
+    private CompanyPO companyPO;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -99,5 +100,15 @@ public class CpuPO {
 
     public void setInstruction(String instruction) {
         this.instruction = instruction;
+    }
+
+    @ManyToOne(fetch=FetchType.EAGER, cascade = CascadeType.REFRESH)
+    @JoinColumn(name="belong_company")
+    public CompanyPO getCompanyPO() {
+        return companyPO;
+    }
+
+    public void setCompanyPO(CompanyPO companyPO) {
+        this.companyPO = companyPO;
     }
 }

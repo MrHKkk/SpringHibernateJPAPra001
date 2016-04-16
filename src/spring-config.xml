@@ -13,6 +13,13 @@
      http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
      http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
 
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.kd.test.app.function.*"/>
+
+
+
+
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -105,6 +112,9 @@
         <property name="companyDAO" ref="companyDAO" />
     </bean>
 
+    <bean class="com.kd.test.app.function.service.impl.HardwareServiceImpl" id="hardwareService">
+    </bean>
+
 
     <bean class="com.kd.test.app.function.dao.impl.CpuDAOImpl" id="cpuDAO">
         <property name="sessionFactory" ref="sessionFactory"></property>
@@ -112,6 +122,9 @@
 
     <bean class="com.kd.test.app.function.dao.impl.CompanyDAOImpl" id="companyDAO">
         <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <bean class="com.kd.test.app.function.dao.impl.HardwareDAOImpl" id="hardwareDAO">
     </bean>
 
 </beans>

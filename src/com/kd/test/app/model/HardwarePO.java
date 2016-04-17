@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="hardware_t")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="category")
+@DiscriminatorColumn(name="category") // if there is no discriminator column, we can use (case...when...) query
 public class HardwarePO {
 
 

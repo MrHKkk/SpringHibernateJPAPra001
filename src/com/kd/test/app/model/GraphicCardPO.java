@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  */
 @Entity
 @DiscriminatorValue("GC")
-public class GraphicCard extends HardwarePO{
+public class GraphicCardPO extends HardwarePO{
 
     private String memorySize;
     private String memoryType;

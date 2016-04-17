@@ -1,10 +1,7 @@
 package com.kd.test.app.main;
 
 import com.kd.test.app.function.service.HardwareService;
-import com.kd.test.app.function.service.impl.HardwareServiceImpl;
-import com.kd.test.app.model.GraphicCard;
-import com.kd.test.app.model.HardDiskPO;
-import com.kd.test.app.model.HardwarePO;
+import com.kd.test.app.model.GraphicCardPO;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -35,7 +32,7 @@ public class MainEntryHardwareDAO {
 //        gcard.setCpuFrequency("400MHz");
 //        service.addHardware(gcard);
 
-        GraphicCard gcard = new GraphicCard();
+        GraphicCardPO gcard = new GraphicCardPO();
         service.findHardware(gcard);
     }
 }

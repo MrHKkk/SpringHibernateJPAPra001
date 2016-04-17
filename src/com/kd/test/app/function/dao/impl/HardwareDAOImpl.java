@@ -33,7 +33,7 @@ public class HardwareDAOImpl extends HibernateDaoSupport implements HardwareDAO 
 
             @Override
             public Object doInHibernate(Session session) throws HibernateException {
-                Query query = session.createQuery("SELECT h.modelCode FROM GraphicCard  h");
+                Query query = session.createQuery("SELECT h.modelCode FROM GraphicCardPO  h");
                 query.list();
                 return null;
             }

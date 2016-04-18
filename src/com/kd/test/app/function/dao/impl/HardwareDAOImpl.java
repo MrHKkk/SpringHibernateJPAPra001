@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by hksgr on 2016/4/16.
  */
-@Repository
+
 public class HardwareDAOImpl extends HibernateDaoSupport implements HardwareDAO {
 
     @Autowired

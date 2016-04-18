@@ -2,7 +2,7 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:cache="http://www.springframework.org/schema/cache"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
      http://www.springframework.org/schema/aop
@@ -113,16 +113,21 @@
     <bean class="com.kd.test.app.function.service.impl.HardwareServiceImpl" id="hardwareService">
     </bean>
 
+    <bean class="com.kd.test.app.function.service.impl.TopicContentServiceImpl" id="topicContentService">
+    </bean>
 
     <bean class="com.kd.test.app.function.dao.impl.CpuDAOImpl" id="cpuDAO">
-        <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 
     <bean class="com.kd.test.app.function.dao.impl.CompanyDAOImpl" id="companyDAO">
-        <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 
     <bean class="com.kd.test.app.function.dao.impl.HardwareDAOImpl" id="hardwareDAO">
     </bean>
+
+    <bean class="com.kd.test.app.function.dao.impl.TopicContentDAOImpl" id="topicContentDAO">
+    </bean>
+
+
 
 </beans>

@@ -1,8 +1,6 @@
 package com.kd.test.app.model;
 
-
-
-
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -21,15 +19,12 @@ public class TopicPO {
     protected String topicAuthor;
     protected String topicDate;
     protected String category;
-    @ElementCollection
-    @CollectionTable(name="topic_content")
-    @org.hibernate.annotations.CollectionId(columns = @Column(name="content_id"),
-        type=@org.hibernate.annotations.Type(type="long"),
-        generator = "IDENTITY")
+
     protected Collection<TopicContentPO> contents = new ArrayList<TopicContentPO>();
 
 
     @Id
+    @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
@@ -73,5 +68,21 @@ public class TopicPO {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+
+    @ElementCollection
+    //@CollectionTable(name="topic_content")
+    @JoinTable(name="topic_content", joinColumns = @JoinColumn(name="topic_id"))
+    @GenericGenerator(name="hilogen",strategy="increment")
+    @org.hibernate.annotations.CollectionId(columns = @Column(name="content_id"),
+            type=@org.hibernate.annotations.Type(type="long"),
+            generator = "hilogen")
+    public Collection<TopicContentPO> getContents() {
+        return contents;
+    }
+
+    public void setContents(Collection<TopicContentPO> contents) {
+        this.contents = contents;
     }
 }

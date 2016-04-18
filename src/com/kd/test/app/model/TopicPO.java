@@ -72,8 +72,8 @@ public class TopicPO {
 
 
     @ElementCollection
-    //@CollectionTable(name="topic_content")
-    @JoinTable(name="topic_content", joinColumns = @JoinColumn(name="topic_id"))
+    @CollectionTable(name="topic_content", joinColumns = @JoinColumn(name="topic_id"))
+    //@JoinTable(name="topic_content", joinColumns = @JoinColumn(name="topic_id"))
     @GenericGenerator(name="hilogen",strategy="increment")
     @org.hibernate.annotations.CollectionId(columns = @Column(name="content_id"),
             type=@org.hibernate.annotations.Type(type="long"),

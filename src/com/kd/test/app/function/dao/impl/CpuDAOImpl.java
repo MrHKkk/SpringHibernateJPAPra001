@@ -81,8 +81,6 @@ public class CpuDAOImpl extends HibernateDaoSupport implements CpuDAO {
     public void deleteCpuByHQL() {
         final String hql = "DELETE FROM CpuPO T WHERE T.cpuName IS NULL";
         this.getHibernateTemplate().executeWithNativeSession(new HibernateCallback<Object>() {
-
-
             @Override
             public Object doInHibernate(Session session) throws HibernateException {
                 Query query = session.createQuery(hql);

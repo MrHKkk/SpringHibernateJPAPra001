@@ -116,6 +116,9 @@
     <bean class="com.kd.test.app.function.service.impl.TopicContentServiceImpl" id="topicContentService">
     </bean>
 
+    <bean class="com.kd.test.app.function.service.impl.CollectionMappingServiceImpl" id="collectionMappingService">
+    </bean>
+
     <bean class="com.kd.test.app.function.dao.impl.CpuDAOImpl" id="cpuDAO">
     </bean>
 
@@ -128,6 +131,7 @@
     <bean class="com.kd.test.app.function.dao.impl.TopicContentDAOImpl" id="topicContentDAO">
     </bean>
 
-
+    <bean class="com.kd.test.app.function.dao.impl.CollectionMappingDAOImpl" id="collectionMappingDAO">
+    </bean>
 
 </beans>
